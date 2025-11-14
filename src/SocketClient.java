@@ -36,7 +36,7 @@ public class SocketClient {
                     String command = jsonObject.getString("command");
 
                     switch (command){
-                        case "imcoming":
+                        case "incoming":
                             this.chatName = jsonObject.getString("data");
                             chatServer.sendToAll(this, "들어오셨습니다.");
                             chatServer.addSocketClient(this);
